@@ -10,7 +10,7 @@ let game = (
 					<ul> 
 						<li> <button onclick=game.play()> Play </button> </li>
 						<li> <button onclick=game.scoreboard()> Score Board </button> </li> 
-						<li> <a href="index.html"><button> Return To Main Website </button> </a> </li> 
+						<li> <a class="btn" href="index.html">Return To Main Website</a> </li> 
 					</ul>
 				</div>
 				`,
