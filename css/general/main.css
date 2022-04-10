@@ -66,9 +66,7 @@ button {
 
 }
 
-button a {
-	color: black;
-}
+
 
 
 @media screen and (max-width: 600px) {
@@ -81,4 +79,20 @@ button a {
 		--heading6-font-size: 1.8rem;
 		--normal-text-font-size: 1.5rem;
 	}
+}
+
+.contact-wrapper h4 {
+	margin-bottom: 20px;
+}
+
+.btn {
+	padding: 1em 3em;
+	background-color: white;
+	color: black;
+	
+	border-radius: 5px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
