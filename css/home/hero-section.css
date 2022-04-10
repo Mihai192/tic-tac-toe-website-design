@@ -36,6 +36,9 @@
 	position: relative;
 }
 
+a.btn {
+	font-size: 1.75em;	
+}
 
 .grid {
 	display: grid;
