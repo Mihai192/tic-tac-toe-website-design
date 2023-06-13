@@ -1,0 +1,105 @@
+.contact {
+	margin: 30px;
+	min-height: 90vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact .form-wrapper {
+	
+	flex: 2 1 500px;
+}
+
+.contact .contact-info {
+	flex: 1 1 500px;
+}
+
+.contact form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+.contact  h2 {
+	width: 90%;
+	margin: auto;
+	
+}
+
+.contact h3 {
+	text-align: center;
+}
+
+.form-row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.form-row > * {
+	flex: 1 1 0;
+}
+
+form {
+	width: 90%;
+	margin: auto;
+}
+
+.contact form > * {
+	margin: 10px;
+}
+
+form input {
+	padding: 10px;
+	min-width: 200px;
+}
+
+.contact li {
+	padding: 10px;
+}
+
+.contact ul {
+	list-style-position: inside;
+}
+
+textarea {
+	min-width: 200px;
+	padding: 10px;
+	width: 100%;
+}
+
+.contact-info {
+	display: flex;
+	justify-content: center;
+	min-height: 350px;
+}
+
+.contact-info-wrapper  {
+	
+	
+	display: flex;
+	flex-direction: column;
+	
+
+}
+
+.contact form input[type="textarea"] {
+	width: 100%;
+	
+	
+}
+
+@media  screen and (max-width: 1000px) {
+
+	.contact-info-wrapper {
+		justify-content: center;
+	}
+	
+}
+
+

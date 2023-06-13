@@ -1,0 +1,288 @@
+#hero {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	min-height: 90vh;
+	background-color: black;
+	color: white;
+	--animation-tic-tac-toe-game: 15s;
+}
+
+
+.hero-text {
+	flex: 1 1 0;
+	
+	text-align: center;
+	width: 90%;
+	margin-left: auto;
+	
+	display: flex;
+	
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.hero-text > * {
+	margin-top: 10px;
+}
+
+
+
+.hero-animation {
+	flex: 1 1 0;
+	
+	position: relative;
+}
+
+a.btn {
+	font-size: 1.75em;	
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	border: 1px solid white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+.grid::after {
+	font-size: var(--normal-text-font-size);
+	content: '';
+	
+	position: absolute;
+	top: 50%;
+	transform: rotate(-45deg);
+
+
+	background-color: red;
+	border-radius: 5px;
+	
+	animation-name: tic-tac-toe-line;
+	animation-duration: var(--animation-tic-tac-toe-game);
+	animation-iteration-count: infinite;
+}
+
+.grid .item {
+	width: calc(10vmin + 3vmax);
+	height: calc(10vmin + 3vmax);
+	border: 1px solid white;
+	
+	position: relative;
+}
+
+
+.grid .item:nth-child(1)::before {
+	content: '';
+	font-size: 5rem;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	
+
+	animation-name: play-o-1;
+	animation-duration: var(--animation-tic-tac-toe-game);
+	
+	animation-iteration-count: infinite;
+}
+
+
+.grid .item:nth-child(4)::before {
+	content: '';
+	font-size: 5rem;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	
+	animation-name: play-o-2;
+	animation-duration: var(--animation-tic-tac-toe-game);
+
+	animation-iteration-count: infinite;
+}
+
+
+.grid .item:nth-child(3)::before {
+	content: '';
+	font-size: 5rem;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	
+	animation-name: play-x-1;
+
+	animation-duration: var(--animation-tic-tac-toe-game);
+	animation-iteration-count: infinite;
+}
+
+
+.grid .item:nth-child(5)::before {
+	content: '';
+	font-size: 5rem;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	
+	
+	animation-name: play-x-2;
+	animation-duration: var(--animation-tic-tac-toe-game);
+	
+	animation-iteration-count: infinite;
+}
+
+
+.grid .item:nth-child(7)::before {
+	content: '';
+	font-size: 5rem;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	animation-name: play-x-3;
+	animation-duration: var(--animation-tic-tac-toe-game);
+
+
+	animation-iteration-count: infinite;
+}
+
+@keyframes play-x-1 {
+	0% {
+		content: '';
+	}
+
+	9.99% {
+		content: '';
+	}
+	
+	10% {
+		content: 'x';
+	}
+
+	100% {
+		content: 'x';
+	}
+}
+
+@keyframes play-x-2 {
+	0% {
+		content: '';
+	}
+
+	49.99% {
+		content: '';
+	}
+
+	50% {
+		content: 'x';
+	}
+
+	100% {
+		content: 'x';
+	}
+}
+
+@keyframes play-x-3 {
+	0% {
+		content: '';
+	}
+
+	89.99% {
+		content: '';
+	}
+
+	90% {
+		content: 'x';
+	}
+
+	100% {
+		content: 'x';
+	}
+}
+
+@keyframes play-o-1 {
+	0% {
+		content: '';
+	}
+
+	29% {
+		content: '';
+	}
+
+	30% {
+		content: 'o';
+	}
+
+	100% {
+		content: 'o';
+	}
+}
+
+@keyframes play-o-2 {
+	0% {
+		content: '';
+	}
+
+	69% {
+		content: '';
+	}
+
+	70% {
+		content: 'o';
+	}
+
+	100% {
+		content: 'o';
+	}
+}
+
+@keyframes tic-tac-toe-line {
+	0% {
+		padding: 0px;
+		width: 0%;
+	}
+
+	94.99% {
+		padding: 0px;
+		width: 0%;
+	}
+
+	95% {
+		padding: 4px;
+		width: 100%;
+	}
+
+	100% {
+		padding: 4px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.hero-text {
+		width: 100%;
+	}
+	
+	#hero {
+		flex-direction: column;
+	}
+}
